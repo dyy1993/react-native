@@ -69,6 +69,8 @@ Pod::Spec.new do |s|
     ss.dependency             "Folly", "2016.09.26.00"
     ss.dependency             "React/Core"
     ss.dependency             "React/cxxreact"
+    ss.dependency             "DoubleConversion"
+    ss.dependency             "glog"
     ss.compiler_flags       = folly_compiler_flags
     ss.private_header_files = "React/Cxx*/*.h"
     ss.source_files         = "React/Cxx*/*.{h,m,mm}"
@@ -89,6 +91,8 @@ Pod::Spec.new do |s|
   s.subspec "jschelpers" do |ss|
     ss.dependency             "Folly", "2016.09.26.00"
     ss.dependency             "React/PrivateDatabase"
+    ss.dependency             "DoubleConversion"
+    ss.dependency             "glog"
     ss.compiler_flags       = folly_compiler_flags
     ss.source_files         = "ReactCommon/jschelpers/*.{cpp,h}"
     ss.private_header_files = "ReactCommon/jschelpers/*.h"
@@ -113,6 +117,8 @@ Pod::Spec.new do |s|
     ss.dependency             "React/jsinspector"
     ss.dependency             "boost-for-react-native", "1.63.0"
     ss.dependency             "Folly", "2016.09.26.00"
+    ss.dependency             "DoubleConversion"
+    ss.dependency             "glog"
     ss.compiler_flags       = folly_compiler_flags
     ss.source_files         = "ReactCommon/cxxreact/*.{cpp,h}"
     ss.exclude_files        = "ReactCommon/cxxreact/SampleCxxModule.*"
